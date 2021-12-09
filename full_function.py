@@ -20,196 +20,124 @@ def student():
         if strand == 's' or strand == 'S':
             comm = input('Press [1] to View subjects for 1st Semester\nPress [2] to View subjects for 2nd Semester\n:')
             if comm == '1':
-                subj1 = ['21st Century Literature', 'Earth Science', 'General Mathematics', 'Komunikasyon at Pananaliksik', 'Oral Communication', 'Physical Education 1']
-                subj2 = ['Empowerment Technologies']
-                subj3 = ['General Biology 1', 'Pre - Calculus']
+                query = "SELECT * FROM stem11"
+                cur = mydb.cursor()
+                cur.execute(query)
+                records = cur.fetchall()
                 print(Fore.MAGENTA + 'LIST OF SUBJECTS FOR FIRST SEMESTER')
-                print(Fore.RED + 'CORE SUBJECTS')
-                for core in subj1:
-                    print(Fore.CYAN + core)
-                print(Fore.RED + 'APPLIED SUBJECTS')
-                for core2 in subj2:
-                    print(Fore.CYAN + core2)
-                print(Fore.RED + 'SPECIALIZED SUBJECTS')
-                for core3 in subj3:
-                    print(Fore.CYAN + core3)
+                for row in records:
+                    print(Fore.CYAN + "->", row[0])
                 student()
             elif comm == '2':
-                subj1 = ['DRRR', 'Pagbasa at Pagsusuri', 'Personal Development', 'PE 2', 'Reading and Writing', 'Statistics and Probability']
-                subj2 = ['EASP', 'Practical Research 1']
-                subj3 = ['Basic Calculus', 'General Biology 2']
+                query = "SELECT * FROM stem11"
+                cur = mydb.cursor()
+                cur.execute(query)
+                records = cur.fetchall()
                 print(Fore.MAGENTA + 'LIST OF SUBJECTS FOR SECOND SEMESTER')
-                print(Fore.RED + 'CORE SUBJECTS')
-                for core in subj1:
-                    print(Fore.CYAN + core)
-                print(Fore.RED + 'APPLIED SUBJECTS')
-                for core2 in subj2:
-                    print(Fore.CYAN + core2)
-                print(Fore.RED + 'SPECIALIZED SUBJECTS')
-                for core3 in subj3:
-                    print(Fore.CYAN + core3)
+                for row in records:
+                    print(Fore.CYAN + "->", row[1])
                 student()
         elif strand == 'h' or strand == 'H':
             comm = input('Press [1] to View subjects for 1st Semester\nPress [2] to View subjects for 2nd Semester\n:')
             if comm == '1':
-                subj1 = ['21st Century Literature', 'Earth Science', 'General Mathematics', 'Komunikasyon at Pananaliksik', 'Oral Communication', 'Physical Education 1']
-                subj2 = ['Empowerment Technologies']
-                subj3 = ['Phillippine Politics and Governance', 'Discipline and Idea in the Social Sciences']
+                query = "SELECT * FROM hums11"
+                cur = mydb.cursor()
+                cur.execute(query)
+                records = cur.fetchall()
                 print(Fore.MAGENTA + 'LIST OF SUBJECTS FOR FIRST SEMESTER')
-                print(Fore.RED + 'CORE SUBJECTS')
-                for core in subj1:
-                    print(Fore.CYAN + core)
-                print(Fore.RED + 'APPLIED SUBJECTS')
-                for core2 in subj2:
-                    print(Fore.CYAN + core2)
-                print(Fore.RED + 'SPECIALIZED SUBJECTS')
-                for core3 in subj3:
-                    print(Fore.CYAN + core3)
+                for row in records:
+                    print(Fore.CYAN + "->", row[0])
                 student()
             elif comm == '2':
-                subj1 = ['Physical Science', 'Pagbasa at Pagsusuri', 'Personal Development', 'PE 2', 'Reading and Writing', 'Statistics and Probability']
-                subj2 = ['EASP', 'Practical Research 1']
-                subj3 = ['Introduction to World Religions', 'Discipline and Ideas in the Applied Social Sciences']
+                query = "SELECT * FROM hums11"
+                cur = mydb.cursor()
+                cur.execute(query)
+                records = cur.fetchall()
                 print(Fore.MAGENTA + 'LIST OF SUBJECTS FOR SECOND SEMESTER')
-                print(Fore.RED + 'CORE SUBJECTS')
-                for core in subj1:
-                    print(Fore.CYAN + core)
-                print(Fore.RED + 'APPLIED SUBJECTS')
-                for core2 in subj2:
-                    print(Fore.CYAN + core2)
-                print(Fore.RED + 'SPECIALIZED SUBJECTS')
-                for core3 in subj3:
-                    print(Fore.CYAN + core3)
+                for row in records:
+                    print(Fore.CYAN + "->", row[1])
                 student()
         elif strand == 'A' or strand == 'a':
             comm = input('Press [1] to View subjects for 1st Semester\nPress [2] to View subjects for 2nd Semester\n:')
             if comm == '1':
-                subj1 = ['21st Century Literature', 'Earth Science', 'General Mathematics', 'Komunikasyon at Pananaliksik', 'Oral Communication', 'Physical Education 1']
-                subj2 = ['Empowerment Technologies']
-                subj3 = ['Applied Economics', 'Bussines Math']
+                query = "SELECT * FROM abm11"
+                cur = mydb.cursor()
+                cur.execute(query)
+                records = cur.fetchall()
                 print(Fore.MAGENTA + 'LIST OF SUBJECTS FOR FIRST SEMESTER')
-                print(Fore.RED + 'CORE SUBJECTS')
-                for core in subj1:
-                    print(Fore.CYAN + core)
-                print(Fore.RED + 'APPLIED SUBJECTS')
-                for core2 in subj2:
-                    print(Fore.CYAN + core2)
-                print(Fore.RED + 'SPECIALIZED SUBJECTS')
-                for core3 in subj3:
-                    print(Fore.CYAN + core3)
+                for row in records:
+                    print(Fore.CYAN + "->", row[0])
                 student()
             elif comm == '2':
-                subj1 = ['Physical Science', 'Pagbasa at Pagsusuri', 'Personal Development', 'PE 2', 'Reading and Writing', 'Statistics and Probability']
-                subj2 = ['EASP', 'Practical Research 1']
-                subj3 = ['No Subject']
+                query = "SELECT * FROM abm11"
+                cur = mydb.cursor()
+                cur.execute(query)
+                records = cur.fetchall()
                 print(Fore.MAGENTA + 'LIST OF SUBJECTS FOR SECOND SEMESTER')
-                print(Fore.RED + 'CORE SUBJECTS')
-                for core in subj1:
-                    print(Fore.CYAN + core)
-                print(Fore.RED + 'APPLIED SUBJECTS')
-                for core2 in subj2:
-                    print(Fore.CYAN + core2)
-                print(Fore.RED + 'SPECIALIZED SUBJECTS')
-                for core3 in subj3:
-                    print(Fore.CYAN + core3)
+                for row in records:
+                    print(Fore.CYAN + "->", row[1])
                 student()
     elif comm == '12':
         strand = input('Press [S] for STEM\nPress [H] for HUMMS\nPress [A] for ABM\n:')
         if strand == 's' or strand == 'S':
             comm = input('Press [1] to View subjects for 1st Semester\nPress [2] to View subjects for 2nd Semester\n:')
             if comm == '1':
-                subj1 = ['Contemporary Philippine Arts', 'Introduction to Philosophy', 'PE 3']
-                subj2 = ['Filipino sa Piling Larang', 'Practical Research 2']
-                subj3 = ['General Chemistry 1', 'General Physics 1']
+                query = "SELECT * FROM stem12"
+                cur = mydb.cursor()
+                cur.execute(query)
+                records = cur.fetchall()
                 print(Fore.MAGENTA + 'LIST OF SUBJECTS FOR FIRST SEMESTER')
-                print(Fore.RED + 'CORE SUBJECTS')
-                for core in subj1:
-                    print(Fore.CYAN + core)
-                print(Fore.RED + 'APPLIED SUBJECTS')
-                for core2 in subj2:
-                    print(Fore.CYAN + core2)
-                print(Fore.RED + 'SPECIALIZED SUBJECTS')
-                for core3 in subj3:
-                    print(Fore.CYAN + core3)
+                for row in records:
+                    print(Fore.CYAN + "->", row[0])
                 student()
             elif comm == '2':
-                subj1 = ['Media Information Literacy', 'Physical Education 4', 'Understanding Culture,Society and Politics']
-                subj2 = ['Entrepreneurship', 'Inquiries,Investigations and Immersion']
-                subj3 = ['General Chemistry 2', 'General Physics 2', 'Work Immersion/Capstone Project']
-                print(Fore.MAGENTA + 'LIST OF SUBJECTS FOR SECOND SEMESTER ')
-                print(Fore.RED + 'CORE SUBJECTS')
-                for core in subj1:
-                    print(Fore.CYAN + core)
-                print(Fore.RED + 'APPLIED SUBJECTS')
-                for core2 in subj2:
-                    print(Fore.CYAN + core2)
-                print(Fore.RED + 'SPECIALIZED SUBJECTS')
-                for core3 in subj3:
-                    print(Fore.CYAN + core3)
+                query = "SELECT * FROM stem12"
+                cur = mydb.cursor()
+                cur.execute(query)
+                records = cur.fetchall()
+                print(Fore.MAGENTA + 'LIST OF SUBJECTS FOR SECOND SEMESTER')
+                for row in records:
+                    print(Fore.CYAN + "->", row[1])
                 student()
         elif strand == 'h' or strand == 'H':
             comm = input('Press [1] to View subjects for 1st Semester\nPress [2] to View subjects for 2nd Semester\n:')
             if comm == '1':
-                subj1 = ['Contemporary Philippine Arts', 'Introduction to Philosophy', 'PE 3']
-                subj2 = ['Filipino sa Piling Larang', 'Practical Research 2']
-                subj3 = ['Creative Writting', 'Community Engagement']
+                query = "SELECT * FROM hums12"
+                cur = mydb.cursor()
+                cur.execute(query)
+                records = cur.fetchall()
                 print(Fore.MAGENTA + 'LIST OF SUBJECTS FOR FIRST SEMESTER')
-                print(Fore.RED + 'CORE SUBJECTS')
-                for core in subj1:
-                    print(Fore.CYAN + core)
-                print(Fore.RED + 'APPLIED SUBJECTS')
-                for core2 in subj2:
-                    print(Fore.CYAN + core2)
-                print(Fore.RED + 'SPECIALIZED SUBJECTS')
-                for core3 in subj3:
-                    print(Fore.CYAN + core3)
+                for row in records:
+                    print(Fore.CYAN + "->", row[0])
                 student()
             elif comm == '2':
-                subj1 = ['Media Information Literacy', 'Physical Education 4', 'Understanding Culture,Society and Politics']
-                subj2 = ['Entrepreneurship', 'Inquiries,Investigations and Immersion']
-                subj3 = ['Creative NON - Fiction', 'Trend,Networks and Critical Thinking', 'Work Immersion']
-                print(Fore.MAGENTA + 'LIST OF SUBJECTS FOR SECOND SEMESTER ')
-                print(Fore.RED + 'CORE SUBJECTS')
-                for core in subj1:
-                    print(Fore.CYAN + core)
-                print(Fore.RED + 'APPLIED SUBJECTS')
-                for core2 in subj2:
-                    print(Fore.CYAN + core2)
-                print(Fore.RED + 'SPECIALIZED SUBJECTS')
-                for core3 in subj3:
-                    print(Fore.CYAN + core3)
+                query = "SELECT * FROM hums12"
+                cur = mydb.cursor()
+                cur.execute(query)
+                records = cur.fetchall()
+                print(Fore.MAGENTA + 'LIST OF SUBJECTS FOR SECOND SEMESTER')
+                for row in records:
+                    print(Fore.CYAN + "->", row[1])
                 student()
         elif strand == 'A' or strand == 'a':
             comm = input('Press [1] to View subjects for 1st Semester\nPress [2] to View subjects for 2nd Semester\n:')
             if comm == '1':
-                subj1 = ['Contemporary Philippine Arts', 'Introduction to Philosophy', 'PE 3']
-                subj2 = ['Filipino sa Piling Larang', 'Practical Research 2']
-                subj3 = ['Creative Writting', 'Community Engagement']
+                query = "SELECT * FROM abm12"
+                cur = mydb.cursor()
+                cur.execute(query)
+                records = cur.fetchall()
                 print(Fore.MAGENTA + 'LIST OF SUBJECTS FOR FIRST SEMESTER')
-                print(Fore.RED + 'CORE SUBJECTS')
-                for core in subj1:
-                    print(Fore.CYAN + core)
-                print(Fore.RED + 'APPLIED SUBJECTS')
-                for core2 in subj2:
-                    print(Fore.CYAN + core2)
-                print(Fore.RED + 'SPECIALIZED SUBJECTS')
-                for core3 in subj3:
-                    print(Fore.CYAN + core3)
+                for row in records:
+                    print(Fore.CYAN + "->", row[0])
                 student()
             elif comm == '2':
-                subj1 = ['Media Information Literacy', 'Physical Education 4', 'Understanding Culture,Society and Politics']
-                subj2 = ['Entrepreneurship', 'Inquiries,Investigations and Immersion']
-                subj3 = ['Creative NON - Fiction', 'Trend,Networks and Critical Thinking', 'Work Immersion']
-                print(Fore.MAGENTA + 'LIST OF SUBJECTS FOR SECOND SEMESTER ')
-                print(Fore.RED + 'CORE SUBJECTS')
-                for core in subj1:
-                    print(Fore.CYAN + core)
-                print(Fore.RED + 'APPLIED SUBJECTS')
-                for core2 in subj2:
-                    print(Fore.CYAN + core2)
-                print(Fore.RED + 'SPECIALIZED SUBJECTS')
-                for core3 in subj3:
-                    print(Fore.CYAN + core3)
+                query = "SELECT * FROM abm12"
+                cur = mydb.cursor()
+                cur.execute(query)
+                records = cur.fetchall()
+                print(Fore.MAGENTA + 'LIST OF SUBJECTS FOR SECOND SEMESTER')
+                for row in records:
+                    print(Fore.CYAN + "->", row[1])
                 student()
     elif comm == 'x' or comm == 'X':
         print(Fore.MAGENTA + 'Thank you for Using Student Sections!')
@@ -241,7 +169,7 @@ def create():
     newdata = input(Fore.MAGENTA +'Enter Database to Create: ')
     mycursor = mydb.cursor()
 
-    mycursor.execute("CREATE TABLE IF NOT EXISTS "+ newdata +" (`Studentid` int(11) NOT NULL AUTO_INCREMENT,`name` varchar(255) NOT NULL,`grade` varchar(255) NOT NULL,`section` varchar(255) NOT NULL,`strand` varchar(255) NOT NULL,PRIMARY KEY (`Studentid`))")
+    mycursor.execute("CREATE TABLE IF NOT EXISTS "+ newdata +" (`subject` varchar(255) NOT NULL,`subject2` varchar(255) NOT NULL,`id` int(11) NOT NULL AUTO_INCREMENT,PRIMARY KEY (`id`))")
 
 def read():
     dbname = input(Fore.MAGENTA + 'Enter Database name to View or Read: ')
@@ -249,21 +177,18 @@ def read():
     cur = mydb.cursor()
     cur.execute(query)
     records = cur.fetchall()
-    print("Number of records in the table: ", cur.rowcount)
+    print(Fore.RED + "LIST OF SUBJECTS FOR DATABASE "+ dbname +" IN FIRST SEMESTER")
     for row in records:
-        print(Fore.CYAN + "Data ID : ", row[0])
-        print(Fore.CYAN + "Student Name : ", row[1])
-        print(Fore.CYAN + "Student Grade : ", row[2])
-        print(Fore.CYAN + "Student Section : ", row[3])
-        print(Fore.CYAN + "Student Strand : ", row[4])
+        print(Fore.CYAN + "", row[0])
+    print(Fore.RED + "LIST OF SUBJECTS FOR DATABASE "+ dbname +" IN SECOND SEMESTER")
+    for row in records:
+        print(Fore.CYAN + "", row[1])
 
 def update():
     dbname = input(Fore.MAGENTA +'Enter Database name to update: ')
-    name = input(Fore.MAGENTA +'Enter Student Name: ')
-    grade = input(Fore.MAGENTA +'Enter Student Grade: ')
-    section = input(Fore.MAGENTA +'Enter Student Section: ')
-    strand = input(Fore.MAGENTA +'Enter Student Strand: ')
-    query = "INSERT INTO "+ dbname + " (name, grade, section, strand) VALUES ('" + name + "', '" + grade + "', '" + section + "', '" + strand + "')"
+    subj = input(Fore.MAGENTA +'Update 1st Sem Subject: ')
+    subj2 = input(Fore.MAGENTA +'Update 2nd Sem Subject: ')
+    query = "INSERT INTO "+ dbname + " (subject, subject2) VALUES ('" + subj + "', '" + subj2 + "')"
     cur = mydb.cursor()
     cur.execute(query)
     mydb.commit()
@@ -274,7 +199,7 @@ def delete():
     dtname = input(Fore.MAGENTA +'Enter Database name to delete data: ')
     sid = input(Fore.MAGENTA +'Enter Data ID to delete Data row: ')
     mycursor = mydb.cursor()
-    sql = "DELETE FROM "+ dtname +" WHERE Studentid = "+ sid +" "
+    sql = "DELETE FROM "+ dtname +" WHERE id = "+ sid +" "
     mycursor.execute(sql)
     mydb.commit()
     print(mycursor.rowcount, Fore.CYAN + "record(s) deleted")
